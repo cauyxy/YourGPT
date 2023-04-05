@@ -24,7 +24,7 @@ PROMPT_F_Train = ("Below is an instruction that describes a task. "
                   "Write a response that appropriately completes the request.\n\n"
                   "### Instruction:\n你叫什么名字？\n\n### Response:我的名字是{user_name}呀{eos}")
 
-model_path = "/home/xinyu/bloomz-560m/"
+model_path = "bigscience/bloomz-560m"
 tokenizer = BloomTokenizerFast.from_pretrained(model_path)
 base_model = BloomForCausalLM.from_pretrained(model_path, return_dict=True, device_map='auto')
 
